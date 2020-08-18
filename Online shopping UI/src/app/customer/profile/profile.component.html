@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h1 class='text-center'>My profile</h1>
+     <div class="row">
+         <div class="col-sm-2">
+             <b *ngIf="!isEdit">{{userDet.pwd}}</b>
+             <input *ngIf="isEdit" [(ngModel)]="userDet.pwd" />
+         </div>
+         <div class="col-sm-2">
+            <b *ngIf="!isEdit">{{userDet.email}}</b>
+            <input *ngIf="isEdit" [(ngModel)]="userDet.email" />
+        </div>
+        <div class="col-sm-2">
+            <b *ngIf="!isEdit">{{userDet.phone}}</b>
+            <input *ngIf="isEdit" [(ngModel)]="userDet.phone" />
+        </div>
+        <div class="col-sm-2">
+            <b *ngIf="!isEdit">{{userDet.address}}</b>
+            <textarea *ngIf="isEdit" [(ngModel)]="userDet.add" >
+            </textarea>
+        </div>
+        <div class="col-sm-4">
+                <input type="button" *ngIf="isEdit" value="cancel" (click)="fnCancel()" class="btn btn-primary" />
+                <input type="button" *ngIf="!isEdit" value="edit" (click)="fnEdit()" class="btn btn-primary"/>
+                <input type="button" *ngIf="isEdit" value="submit " (click)="fnUpdate()" class="btn btn-primary"/>
+            </div>
+     </div>
+</div>

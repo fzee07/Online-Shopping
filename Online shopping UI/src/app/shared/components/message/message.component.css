@@ -1,0 +1,14 @@
+.message{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.message > span{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}

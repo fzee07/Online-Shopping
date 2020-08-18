@@ -1,0 +1,16 @@
+<div *ngFor="let prodObj of orders" class="container-fluid m-b-20 "> 
+    <mat-card>
+        <div class="row">
+            <div class="col-sm-3">
+                <img  src="{{imagePath+prodObj._id+'.jpg?'+timeStamp}}" width='100px' height="100px" />
+                 
+            </div>
+            <div class='col-sm-9'>
+                 <h2>{{prodObj.name}}</h2>
+                 <h3>{{prodObj.cost}}</h3>
+                 <h4>{{prodObj.desc}}</h4>
+            </div>
+        </div>
+
+    </mat-card>
+</div>

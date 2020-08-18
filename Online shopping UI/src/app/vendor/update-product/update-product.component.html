@@ -1,0 +1,62 @@
+<div class="container-fluid">
+        <h1 class='text-center m-b-50 m-t-50'>Update Product</h1>
+    
+        <div class="row form-group">
+            <div class="col-sm-5 text-right">
+    
+                <b class='lbl-text'> Name:</b>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field>
+                    <input matInput placeholder="Product Name" [(ngModel)]="productObj.name">
+                </mat-form-field>
+            </div>
+        </div>
+    
+        <div class="row form-group">
+            <div class="col-sm-5 text-right">
+                <b class="lbl-text">Cost:</b>
+    
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field>
+                    <input matInput placeholder="Cost" [(ngModel)]="productObj.cost">
+                </mat-form-field>
+            </div>
+        </div>
+    
+    
+        <div class="row form-group">
+            <div class="col-sm-5 text-right">
+                <b class="lbl-text">Desc:</b>
+    
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field>
+                    <input matInput placeholder="Description" [(ngModel)]="productObj.desc">
+                </mat-form-field>
+            </div>
+        </div>
+    
+        <div class="row form-group">
+            <div class="col-sm-5 text-right">
+                <b class="lbl-text">Photo:</b>
+    
+            </div>
+            <div class="col-sm-3">
+                <input #file type="file" ng2FileSelect [uploader]="uploader" />
+            </div>
+            <div class="col-sm-4">
+                <img *ngIf="productObj._id" src="{{imagePath+productObj._id+'.jpg?'+timeStamp}}" width='100px' height="100px" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-12 text-center">
+                <input type="button" class="btn btn-primary" value='Update Product' (click)="fnUpdateProduct()" />
+            </div>
+    
+        </div>
+    </div>
+    
+    <p>
+    </p>

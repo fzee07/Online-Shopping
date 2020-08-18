@@ -1,0 +1,4 @@
+<app-table [hasImage]='false' [headers]="headers"  [data]="data" [keys]="keys" (editInfo)="fnEditInfo($event)"
+  (deleteInfo)="fnDeleteInfo($event)"></app-table>
+<app-pagination *ngIf="isShowPagination" [totalPages]="totalPages" [totalData]="totalData" (fnCurrData)="fnCurrData($event)" [perPage]="perPage">
+</app-pagination>

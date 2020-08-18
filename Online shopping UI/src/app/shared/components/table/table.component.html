@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class='table table-bordered table-striped table-hover'>
+        <tr>
+          <th *ngIf="hasImage">Image</th>
+          <th *ngFor="let h of headers">
+             {{h}}
+          </th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <tr *ngFor="let dataObj of data">
+              <td *ngIf="hasImage"><img src="{{imagePath+dataObj._id+'.jpg'+ '?' + timeStamp}}" width="100px" height="100px" /></td>
+              <td *ngFor='let k of keys'>
+                  {{dataObj[k]}}
+              </td>
+              <td><input type='button' value='edit' class='btn btn-primary' (click)="fnEdit(dataObj)" /></td>
+              <td><input type='button' value='delete' class='btn btn-primary' (click)="fnDelete(dataObj)" /></td>
+        </tr>
+    </table>
+</div>
+
+<app-modal *ngIf='isShowModal' (fnSendData)="fnSendData($event)"></app-modal>

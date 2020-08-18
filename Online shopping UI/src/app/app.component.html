@@ -1,0 +1,5 @@
+<app-header></app-header>
+<app-message *ngIf="isShow" (fnCloseMsg)="fnCloseMsg($event)" [msg]='msg' [clr]='clr'></app-message>
+<app-mask *ngIf="isShowMask"></app-mask>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

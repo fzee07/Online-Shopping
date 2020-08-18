@@ -1,0 +1,23 @@
+<mat-card>
+    <div class="row form-group">
+        <div class="col-sm-5">
+            <img src="{{imagePath+prodObj._id+'.jpg?'+timeStamp}}" width='500px' height="500px" />
+
+        </div>
+        <div class='col-sm-7'>
+            <h2>{{prodObj.name}}</h2>
+            <h3>{{prodObj.cost}}</h3>
+            <h4>{{prodObj.desc}}</h4>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <input type='button' value="BUY NOW" class="btn  btn-primary" (click)="fnPlaceOrder()" />
+
+        </div>
+        <div class="col-sm-2">
+            <input type='button' value="ADD TO CART" class="btn  btn-primary" (click)="fnAddToCart()" />
+
+        </div>
+    </div>
+</mat-card>

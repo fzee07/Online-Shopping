@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.lbl-text{
+    position: relative;
+    top: 20px;
+}
+.menu{
+    text-align: right;
+    line-height: 40px;
+    background: aliceblue
+}
+
+
+.menu>a{
+    margin-right: 15px;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.m-t-100{
+    margin-top:100px;
+}
+.m-b-100{
+    margin-bottom: 100px;
+}
+.m-b-20{
+    margin-bottom: 20px
+}
+.m-b-50{
+    margin-bottom: 50px;
+}
+.m-t-50{
+   margin-top:50px
+}
+.menu-active{
+    font-weight: bold;
+    color: red;
+    font-size: 17px;
+    text-decoration: overline;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

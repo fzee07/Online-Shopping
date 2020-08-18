@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <h1 class='text-center m-b-50 m-t-50'>Add Product</h1>
+
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+
+            <b class='lbl-text'> Name:</b>
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field>
+                <input matInput placeholder="Product Name" [(ngModel)]="dataObj.name">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b class="lbl-text">Cost:</b>
+
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field>
+                <input matInput placeholder="Cost" [(ngModel)]="dataObj.cost">
+            </mat-form-field>
+        </div>
+    </div>
+
+
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b class="lbl-text">Desc:</b>
+
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field>
+                <input matInput placeholder="Description" [(ngModel)]="dataObj.desc">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b class="lbl-text">Photo:</b>
+
+        </div>
+        <div class="col-sm-3">
+            <input #file type="file" ng2FileSelect [uploader]="uploader" />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-12 text-center">
+            <input type="button" class="btn btn-primary" value='Add Product' (click)="fnAddProduct()" />
+        </div>
+
+    </div>
+</div>
+
+<p>
+</p>

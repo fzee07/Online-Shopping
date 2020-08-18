@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <h1 class='text-center m-b-50 m-t-50'>Login Page</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="fnLogin()">
+    <div class="row">
+        <div class="col-sm-5 text-right">
+           <b class="lbl-text">User ID:</b> 
+
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field >
+                <input matInput placeholder="User Id" formControlName="uid"  >
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <div *ngIf="submitted && f.uid.errors" class="text-danger">
+                <div *ngIf="f.uid.errors.required">UID is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-5 text-right">
+               
+                <b class='lbl-text'> Password:</b>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field >
+                    <input matInput placeholder="Password" formControlName="pwd" >
+                </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+                <div *ngIf="submitted && f.pwd.errors" class="text-danger">
+                    <div *ngIf="f.pwd.errors.required">pwd is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12 text-center">
+ <button class="btn btn-primary">Login</button>
+ <a href="#/register">Click here to register</a>
+                </div>
+               
+            </div>
+            </form>
+</div>
+
+<p>
+</p>

@@ -1,0 +1,17 @@
+<div class="container-fluid" >
+  <div class="row form-group">
+    <div class="col-sm-3">
+      <input type='text' class='form-control w-50p' [(ngModel)]='goTo' />
+      <input type="button" value="goto" class='btn btn-primary' (click)="fnGoTo()" />
+    </div>
+    <div class="col-sm-6 text-center">
+      <input type="button" value="pre" (click)="fnPre()" class='btn btn-primary' [disabled]="currPage == 1"/>
+      {{currPage}}
+      <input type="button" value="next" (click)="fnNext()" class='btn btn-primary' [disabled]="currPage == totalPages" />
+    </div>
+    <div class="col-sm-3">
+      <span>Total Pages: </span> {{totalPages}}
+    </div>
+  </div>
+
+</div>
